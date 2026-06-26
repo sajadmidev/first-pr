@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *,
+        *::before,
+        *::after {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 80vh;
+            
+            background: rgb(188, 188, 188);
+            overflow-x: hidden;
+        }
+
+        .head {
+            width: 100%;
+            height: 70px;
+            background-color: black;
+            padding: 0 15%;
+            display: flex;
+
+
+            >* {}
+
+            >figure {
+                width: 20%;
+                display: flex;
+
+                >img {
+                    width: 100%;
+                }
+
+            }
+
+            >nav {
+                width: 80%;
+
+                >ul {
+                    
+                    display: flex;
+                    width: 100%;
+                    height: 100%;
+                    justify-content: end;
+                    gap: 35px;
+                   
+                    >li {position: relative;
+                        
+                     
+                        list-style-type: none;
+                        >a {
+                     
+                            color: rgb(255, 255, 255);
+                            text-decoration: none;
+                            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+                            font-size: 22px;
+                            text-transform: capitalize;
+                            display: flex;
+                            height: 100%;
+                            align-items: center;
+                            transition: 1s;
+                            &:hover{
+                                background-color: rgba(244, 244, 244, 0.691);
+                                color: black;
+                            }
+                        }
+                        /* submenuu */
+                        &:hover{
+                            >ul{
+                                left: -40px;
+                            opacity: 1;
+                            visibility: visible;
+                            }
+                   
+                        }
+                        >.drop{
+                            position: absolute; 
+                            left: 40px;
+                            top: 70px;
+                            width: 250%;
+                            background-color: rgb(0, 0, 0);
+                            border-radius: 0 0 15px 15px;
+                            opacity: 0;
+                            visibility: hidden;
+                            transition: 1s;      
+                            z-index: 2;                  
+                            >li{
+                                width: 100%;
+                                height: 50px;
+                                list-style-type: none;
+                            padding-left: 15px;
+                            border-bottom: 1px solid rgba(131, 131, 131, 0.37);
+                            >a{
+                                text-decoration: none;
+                                color: white;
+                                display: flex; width: 100%;
+                                height: 100%;
+                                align-items: center;
+                                &:hover{
+                                 
+                                    color: rgb(255, 251, 0);
+                                }
+                            }
+                            }
+
+                        }
+                    }
+
+                }
+            }
+
+        }
+        .img1{
+            >figure{
+
+                >img{position: relative;
+
+                }
+                >h1{
+                    position: absolute;
+                    bottom: 100px;
+                    left: 200px;
+                    color: white;
+                    /* box-shadow: 0 0 100px 10px; */
+                    font-size: 50px;
+                }
+                >a{
+                    position: absolute;
+                    bottom: 100px;
+                    left: 700px;
+                    font-size: 50px;
+                text-decoration: none;
+                background-color: rgba(0, 0, 0, 0.493);
+                color: rgb(255, 255, 255);
+                border-radius: 40px;
+                width: 17%;
+                display: flex;
+            justify-content: center;
+            transition: 1s;
+            &:hover{
+
+                background-color: rgba(0, 0, 0, 0.761);
+            }
+                
+
+                }
+            }
+
+        }
+.contact {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+.contact img {
+    width: 130px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.info {
+    position: absolute;
+    right: 80px;
+    bottom: 10px;
+
+    background: #222;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 10px;
+
+    opacity: 0;
+    transform: translateX(20px);
+    transition: .4s;
+    white-space: nowrap;
+}
+
+.contact:hover .info {
+    opacity: 1;
+    transform: translateX(0);
+}
+.box{
+    
+    width: 100%;
+    height: 600px;
+    margin: 40px 0;
+
+    >div{
+        width: 43%;
+        height: 300px;
+        position: relative;
+        >img{
+            width: 33%;
+            position: absolute;
+            top: 70px;
+            left: 200px;
+        }
+        >p{
+
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+            font-size: 20px;
+            color: rgb(0, 0, 0);
+            position: absolute;
+            top: 450px;
+            left: 150px;
+        }
+    }
+>.inp1{
+    position: absolute;
+    left: 370px;
+    width: 150%;
+    bottom: -40%;
+}
+>.inp2{
+    font-size: 28px;
+    display: flex;
+    justify-content: center;
+    width: 230px;
+    position: absolute;
+    left: 900px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    background-color: black;
+    bottom: -70%;
+    border-radius: 50px;
+    transition: 1s;
+    &:hover{
+        background-color: yellow;
+        color: black;
+    }
+
+}
+>.inp3{
+    text-decoration: none;
+    display: flex; justify-content: center;
+    width: 20%;
+    font-size: 23px;
+    position: absolute;
+    left: 870px;
+    top: 172%;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    border-radius: 50px;
+    transition: 1s;
+    &:hover{
+        background-color: yellow;
+        color: black;
+    }
+}
+
+}
+.fot{
+    position: relative;
+    width: 100%;
+    min-height: 100px;
+   
+    >h1{
+        font-size: 50px;
+        position: absolute;
+        left: 25%;
+        color: rgb(0, 0, 0);
+    }
+    >span{
+        position: absolute;
+        left: 20%;
+        top: 100px;
+        color: black;
+        font-size: 35px;
+    }
+    >.inp10{
+        position: absolute;
+        left: 50%;
+        top: 100px;
+        font-size: 35px;
+    }
+    >.inp11{
+        position: absolute;
+        left: 75%;
+        top: 100px;
+        font-size: 40px;
+    }
+}
+.foot{
+    display: flex;
+    position: relative;
+   
+    width: 100%;
+    height: 300px;
+    justify-content: center;
+    >h1{
+        position: absolute;
+        left: 600px;
+        bottom: 220px;
+        font-size: 35px;
+       
+
+    }
+    >p{position: absolute;
+        top: 100px;
+        font-size: 20px;
+
+    }
+
+}
+.box2{
+    display: flex;
+    width: 65px;
+    height: 40px;
+    border: 2px solid black;
+    position: fixed;
+    top: 300px;
+    background-color: black;
+    border-radius: 15px;
+    >a{
+        width: 100%;
+        display: flex;justify-content: center;
+        align-items: center;
+        color: white;
+        font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+text-decoration: none;
+&:hover{
+color: yellow;
+}
+
+    }
+}
+.para{
+    position: relative;
+    bottom: 200px;
+    width: 80%;
+    height: 70vh;
+    /* border: 2px solid red */
+    margin: 100px auto;
+    display: grid;
+    grid-template-rows: repeat(2 , 50%);
+    grid-template-columns: repeat(5 , 20%);
+    >figure{
+        padding: 15px;
+        /* border: 1px solid back; */
+        >img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+        &:nth-of-type(1){
+            grid-area: 1 / 1 / span 1 / span 1;
+        }
+        &:nth-of-type(2){
+            grid-area: 1 / 2 / span 2 / span 2;
+        }
+        &:nth-of-type(6){
+            
+            grid-area: 4 / span 1;
+            
+        }
+        &:nth-of-type(4){
+            grid-area: 1 / span 2;
+        }
+        
+    }
+}
+.buttons{
+    position: relative;
+    bottom: 300px;
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    margin-top:50px;
+}
+
+.btn{
+    display:inline-block;
+    text-decoration:none;
+    padding:18px 40px;
+    background:#1f1f1f;
+    color:white;
+    font-size:22px;
+    font-weight:bold;
+    border-radius:15px;
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:translateY(-5px);
+    background:#333;
+}
+.footer{
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:40px 20px;
+}
+
+.footer h2{
+    margin:0;
+    font-size:40px;
+}
+
+.footer p{
+    margin:15px 0;
+}
+
+.menu{
+    margin:20px 0;
+}
+
+.menu a{
+    color:white;
+    text-decoration:none;
+    margin:0 15px;
+}
+
+.social{
+    margin-top:20px;
+    display:flex;
+    justify-content:center;
+    gap:15px;
+}
+
+.social a{
+    text-decoration:none;
+    color:white;
+    border:1px solid #555;
+    padding:8px 16px;
+    border-radius:20px;
+    transition:.3s;
+}
+
+.social a:hover{
+    transform:translateY(-3px);
+    border-color:white;
+}
+
+.copy{
+    margin-top:20px;
+    opacity:.8;
+}
+
+    </style>
+</head>
+
+<body>
+    <header class="head">
+        <figure>
+            <img src="img/download.png" alt="">
+
+        </figure>
+        <nav>
+            <ul>
+                <li><a href="">home</a></li>
+                <li><a href="">submenu</a></li>
+                <li><a href="">gallery</a></li>
+                <li><a href="">Account</a>
+                    <ul class="drop">
+                        <li><a href="">login</a></li>
+                        <li><a href="">sign up</a></li>
+                        <li><a href="">Learning</a></li>
+                        <li><a href="">out</a></li>
+                        <li><a href="">menu</a></li>
+                    </ul>
+                </li>
+                <li><a href="">contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="img1">
+        <figure><img src="img/codm-hero.jpg" alt="">
+            <h1>Do you want to play?</h1>
+            <a href="">continue</a>
+        </figure>
+      
+    </section>
+<div class="contact">
+    <img src="img/photo27795658162.jpg" alt="Profile">
+
+    <div class="info">
+        📱 09102101436<br>
+        📷 @sajjadmi_instagram
+    </div>
+</div>
+<article class="box">
+    <div>
+        <img src="img/img2.jpg" alt="">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis saepe repudiandae dicta? Corporis, debitis vitae? Maiores, iusto, reprehenderit illo veniam ipsam autem animi possimus labore culpa atque, veritatis accusantium repellat.</p>
+
+    </div>
+    <div class="inp1">
+        <img src="img/img5.jpg" alt="">
+    </div>
+    <a href="" class="inp2">just kick and paly</a>
+    <a href="" class="inp3">come talk to us and lerning</a>
+
+
+</article>
+<section class="fot">
+    <h1>🔫which gun do you like the most?</h1>
+    <span>🎯sniper?</span>
+    <span class="inp10">🔫rifle?</span>
+    <span class="inp11">💥smg?</span>
+</section><br><br><br>
+<article class="foot">
+    <h1>Welcome to our game!</h1>
+    <p>
+Whatever gun you can think of, whatever weapon you love, you'll find it here waiting for you to experience.
+</p>
+</article>
+<div class="box2"><a href="">shop</a></div>
+<div class="para">
+    <figure><img src="img/1755107209679.webp" alt=""></figure>
+    <figure><img src="img/apps.55183.14294905624066082.fe6438c3-35eb-479e-9a62-93f8c5cb99f9.2f8c7f01-ea95-40bb-b5fb-7e6d7322e568" alt=""></figure>
+    <figure><img src="img/MV5BNzczN2VmMzEtNTk4NS00OTk0LTg4MWYtZWVkYzQ0MzE2NmQ4XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt=""></figure>
+    <figure><img src="img/BO7-CODNEXT-TOUT.jpg" alt=""></figure>
+    <figure><img src="img/Warzone2_Artwork_CoDWarzone2.webp" alt=""></figure>
+    
+    
+</div>
+<br>
+
+<div class="buttons">
+    <a href="#" class="btn">Log In</a>
+    <a href="#" class="btn">Sign Up</a>
+</div>
+<footer class="footer">
+
+    <h2>GameHub</h2>
+
+    <p>Play the best games and enjoy your time.</p>
+
+    <div class="menu">
+        <a href="#">Home</a>
+        <a href="#">Shop</a>
+        <a href="#">Contact</a>
+    </div>
+
+    <p class="copy">
+        © 2026 GameHub. All Rights Reserved.
+    </p>
+
+    <div class="social">
+        <a href="https://www.instagram.com/sajjadmi_?igsh=MWl4MXoxcGF5ZXJocQ==">Instagram</a>
+        <a href="https://www.linkedin.com/in/sajad-miri-7a925b419?utm_source=share_via&utm_content=profile&utm_medium=member_android">LinkedIn</a>
+        <a href="https://github.com/sajadmidev">GitHub</a>
+    </div>
+
+</footer>
+
+
+</body>
+
+
+</html>
