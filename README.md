@@ -56,13 +56,12 @@ images/preview.png
 ## 📸 Screenshots
 
 <p align="center">
-  <img src="<img width="1900" height="906" alt="Screenshot 2026-06-27 144543" src="https://github.com/user-attachments/assets/255af506-659f-4b13-b99e-b438944de732" />
-" width="32%" alt="Home">
-  <img src="<img width="1900" height="873" alt="Screenshot 2026-06-27 144514" src="https://github.com/user-attachments/assets/19f4a3ca-efd0-40c2-a58e-6321d5fb3720" />
-" width="32%" alt="Services">
-  <img src="<img width="1898" height="893" alt="Screenshot 2026-06-27 144527" src="https://github.com/user-attachments/assets/0d2eed19-03ab-4cad-8d98-9ca6e6bc2cd3" />
-" width="32%" alt="Contact">
+  <img src="<img width="1898" height="893" alt="Screenshot 2026-06-27 144527" src="https://github.com/user-attachments/assets/6bb724c3-8519-4ca9-98ed-be6117836952" />" width="32%" alt="Home">
+  <img src="images/services.png" width="32%" alt="Services">
+  <img src="images/contact.png" width="32%" alt="Contact">
 </p>
+
+
 
 
 🌐 Live Demo
